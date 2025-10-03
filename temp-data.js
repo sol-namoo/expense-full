@@ -1,5 +1,11 @@
 // 가짜 데이터베이스 (In-memory DB)
 let nextId = 4;
+let setNextId = (id) => {
+  nextId = id;
+};
+let getNextId = () => {
+  return nextId;
+};
 let expenses = [
   {
     id: 1,
@@ -24,4 +30,4 @@ let expenses = [
   },
 ];
 
-module.exports = { expenses, nextId };
+module.exports = { expenses, nextId, setNextId, getNextId };
